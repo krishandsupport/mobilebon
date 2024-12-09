@@ -1,0 +1,224 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header {
+    background-color: white;
+    padding: 10px 20px;
+    align-items: right;
+    /*color: white;*/
+    position:fixed;
+    width: 100vw;
+    /*top:0;*/
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header .left, .header .center, .header .right {
+    display: flex;
+    align-items: center;
+}
+.header .left {
+    justify-content: flex-start;
+    padding-left: 0px; /* Opsional: sedikit padding kiri */
+}
+.header .center {
+    justify-content: center;
+    flex: 1; /* Agar judul di tengah */
+}
+.header .right {
+    margin-right: 0;
+    justify-content: flex-end;
+}
+.header img {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px; /* Jarak antar ikon */
+    cursor: pointer;
+}
+.header .left img {
+    margin-left: 0; /* Hilangkan margin pada ikon "back" */
+}
+.header judul {
+    margin: 0; /* Hilangkan margin default pada judul */
+}
+
+.menu {
+    background-color: white;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+.menu a {
+    color: #4b2e83;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+}
+.menu a img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 2fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-item {
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+.menu-item img {
+    width: 25px;
+    height: 25px;
+}
+.menu-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #4b2e83;
+}
+
+
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;  /*Ini menggeser ikon ke kanan */
+}
+.notification-icon img {
+    width: 20px;
+    height: 20px;
+}
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: 75px !important;
+}
+
+.container-t45 {
+    overflow-x: auto; /* Memungkinkan gulir horizontal */
+    height: 45px; /* Tambahkan margin untuk menghindari header */
+}
+
+.table-container {
+    overflow-x: auto; /* Memungkinkan gulir horizontal */
+    /*margin-top: 35px; Tambahkan margin untuk menghindari header */
+    /*margin-bottom: 100px;*/
+}
+
+/* Gaya untuk tabel */
+.styled-table {
+    width: 100%;
+    /*margin-top: 45px;*/
+    border-collapse: collapse;
+    font-size: 12px;
+    /*font-family: 'Arial', sans-serif;*/
+    /*background-color: white;  Warna latar belakang yang lembut */
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    /*box-shadow: 0 -2px 10px rgba(0,0,0,0.1);*/
+    overflow-x: auto;
+    overflow-y: auto;
+    /*max-height: 100%;*/
+}
+.styled-table thead tr {
+    background-color: #4b2e83;
+    color: white;
+    text-align: left;
+    /*position:sticky;*/
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px 12px;
+    white-space: nowrap; 
+}
+
+.styled-table td img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px; 
+    cursor: pointer;
+} 
+.styled-table td button {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4b2e83;
+}
+.styled-table tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+
+/* Gaya untuk modal */
+.modal-header {
+    background-color: #4b2e83;
+    color: white;
+}
+.modal-title {
+    font-family: 'Poppins', sans-serif; /* Konsisten dengan font header */
+    font-size: 14px; /* Ukuran font yang sama dengan header */
+}
+.modal-body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+.form-control {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px; /* Sesuaikan ukuran font dengan konten utama */
+}
+.modal-footer button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+.modal-footer .btn-primary {
+    background-color: #4b2e83;
+    border-color: #4b2e83;
+}
+
+.basic-btn {
+  background-color: #4CAF50; /* Warna latar hijau */
+  color: white; /* Warna teks putih */
+  padding: 10px 20px; /* Jarak dalam tombol */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Membuat sudut tumpul */
+  cursor: pointer; /* Pointer saat diarahkan */
+  font-size: 16px; /* Ukuran font */
+}
